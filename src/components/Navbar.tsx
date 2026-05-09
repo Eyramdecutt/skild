@@ -13,12 +13,12 @@ const Navbar = () => {
             <Link to='/'>
                 <span>skild</span>
             </Link>
+            <div className='actions'>
+
+               <Link to='/sign-in/$' className='btn-primary'><LogIn size='16' /> Sign in</Link>
+            </div>
             </div>
 
-            <div className='actions'>
-                <LogIn size='16' />
-               <Link to='/sign-in/$' className='btn-primary'>Sign in</Link>
-            </div>
         </nav>
     )
 }

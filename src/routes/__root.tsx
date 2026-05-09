@@ -66,8 +66,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
                     </div>
                 </header>
 
-                <main className='frame'>
-                    <div>
+                <main>
+                    <div  className='frame'>
                         {children}
                     </div>
                 </main>
