@@ -6,11 +6,17 @@ const SkillCard = ({ authorEmail, category, createdAt,
 description, installCommand, tags, title}: SkillRecord) => {
 	const [copied, setCopied] = useState(false);
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText(installCommand);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-    }
+    const handleCopy = async() => {
+        try {
+            await navigator.clipboard.writeText
+            (installCommand);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch {
+            setCopied(false);
+        }
+    };
+
 
 	return <article className='skill-card'>
         <Link
@@ -37,7 +43,12 @@ description, installCommand, tags, title}: SkillRecord) => {
                     <img src="/logo512.png" alt="author avatar" className='avatar' />
                     <div className='author-copy'>
                         <p>Adrian</p>
-                        <p>{new Date(createdAt as string).toLocaleDateString()}</p>
+                        <p>
+                            {createdAt
+                            ? new Date(createdAt).
+                            toLocaleDateString()
+                            : 'Unknown Date'}
+                        </p>
                     </div>
                 </div>
 
