@@ -60,3 +60,5 @@ export const dummySkills: SkillRecord[] = [
     authorEmail: 'analytics@skild.dev',
   },
 ];
+
+//

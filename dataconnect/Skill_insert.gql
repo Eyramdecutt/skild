@@ -1,0 +1,7 @@
+# This is a file for you to write an un-named mutation. 
+# Only one un-named mutation is allowed per file.
+mutation {
+  skill_insert(
+    data: {id: "11111111222233334444555555555555", authorClerkId: "user_3Da061W2NblFMKRUTnxqQfwn2SL", createdAt: "2026-05-13T07:43:06.055Z", description: "Collects skill execution metrics and generates summary reports for performance monitoring.", installCommand: "npm install @skild/usage-analytics-reporter", promptConfig: "You are a professional performance optimization engineer", tags: ["'metrics', 'reporting'"], title: "Usage Analytics Reporter", usageExample: "Review your code and optimize it"}
+  )
+}
